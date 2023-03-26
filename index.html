@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Magic Machine Part Name Generator</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<h1>Magic Machine Part Name Generator</h1>
+	<p>Click the button below to generate a new magic sounding machine part name:</p>
+	<button onclick="generateName()">Generate</button>
+	<p id="name"></p>
+	<script>
+		function generateName() {
+			// List of magic-sounding prefixes and suffixes for machine parts
+			// List of magic-sounding prefixes for machine parts
+            var prefixes = [
+            "Arcane",
+            "Mystic",
+            "Enchanted",
+            "Ethereal",
+            "Divine",
+            "Celestial",
+            "Spectral",
+            "Eldritch",
+            "Mythic",
+            "Occult",
+            "Esoteric",
+            "Supernatural",
+            "Otherworldly",
+            "Astral",
+            "Necrotic",
+            "Cursed",
+            "Blessed"
+            ];
+
+            var nouns = [
+            "Crystal",
+            "Fire",
+            "Ice",
+            "Wind",
+            "Thunder",
+            "Lightning",
+            "Storm",
+            "Shadow",
+            "Spirit",
+            "Soul",
+            "Essence",
+            "Mist",
+            "Rain",
+            "Snow",
+            "Sun",
+            "Moon",
+            "Star",
+            "Galaxy",
+            "Nova",
+            "Comet",
+            "Meteor"
+            ]
+
+            // List of magic-sounding suffixes for machine parts
+            var suffixes = [
+            "Gyroscope",
+            "Chronometer",
+            "Transducer",
+            "Oscillator",
+            "Converter",
+            "Regulator",
+            "Amplifier",
+            "Resonator",
+            "Inductor",
+            "Capacitor",
+            "Rectifier",
+            "Diode",
+            "Triode",
+            "Tetrode",
+            "Pentode",
+            "Decoupler",
+            "Stabilizer",
+            "Modulator",
+            "Demodulator",
+            "Transformer",
+            "Reactor",
+            "Emitter",
+            "Receiver",
+            "Detector",
+            "Generator",
+            "Reflector",
+            "Dissipator"
+            ];
+			// Randomly select a prefix and suffix from the lists
+			var prefix = prefixes[Math.floor(Math.random() * prefixes.length)];
+            var noun = nouns[Math.floor(Math.random() * nouns.length)];
+			var suffix = suffixes[Math.floor(Math.random() * suffixes.length)];
+
+			// Generate the magic sounding machine part name
+			var name = prefix + " " + (Math.random() < 0.4 ? (noun + " "): "") + suffix;
+
+			// Update the HTML element with the new name
+			document.getElementById("name").innerHTML = name;
+		}
+	</script>
+</body>
+</html>
